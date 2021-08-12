@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ScrollingActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.MyApplicatio.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:weightSum="3"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/Theme.MyApplicatio.PopupOverlay" />
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="110dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="20dp"
+                android:text="Сейчас доступно,"
+                android:textFontWeight="1"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_anchor="@+id/app_bar"
+                app:layout_anchorGravity="start|top" />
+
+            <TextView
+                android:id="@+id/textCurrentTime"
+                android:layout_width="70dp"
+                android:layout_height="22dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="210dp"
+                android:inputType="time"
+                android:text="01:20"
+                android:textFontWeight="1"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="130dp"
+                android:text="Остатки по пакетам"></TextView>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <include
+        layout="@layout/content_scrolling"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"></include>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ruble"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="end|center_vertical|center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="355dp"
+        android:text="Расходы"
+        android:textColor="@color/black"
+        android:textStyle="bold"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="315dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="485dp"
+        android:orientation="vertical"
+        android:weightSum="11"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"></View>
+
+        <RelativeLayout
+            android:id="@+id/myTariff"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="375dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="17dp"
+                android:text="Пополнить счёт"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"></View>
+
+        <RelativeLayout
+            android:id="@+id/accountReplenishment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="375dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="17dp"
+                android:text="Мой тариф"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"></TextView>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line8"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"></View>
+
+        <RelativeLayout
+            android:id="@+id/connected"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="375dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="7dp"
+                android:text="Подключённые"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="24dp"
+                android:hint="Услуги, опции и сервисы"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line5"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"></View>
+
+        <RelativeLayout
+            android:id="@+id/myFamiliy"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="375dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="17dp"
+                android:text="Моя Семья"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line6"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"></View>
+
+        <RelativeLayout
+            android:id="@+id/roaming"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="375dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="17dp"
+                android:text="Роуминг"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line7"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"></View>
+
+        <RelativeLayout
+            android:id="@+id/orderAsimCard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="375dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="17dp"
+                android:text="Заказать SIM-карту"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/costsLinear"
+        android:layout_width="390dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="378dp"
+        android:orientation="vertical"
+        android:weightSum="5"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+        <RelativeLayout
+            android:id="@+id/rv_costs"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:onClick="onClick">
+
+            <TextView
+                android:id="@+id/monthTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:text="Август"
+                android:textColor="@color/black"
+                android:textStyle="bold"></TextView>
+
+            <ProgressBar
+                android:id="@+id/minutesProgressBar2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="14dp"
+                android:outlineAmbientShadowColor="#39913C"></ProgressBar>
+
+            <TextView
+                android:id="@+id/costs1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="65dp"
+                android:hint="В этом месяце расходов не было"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="65dp"
+                android:layout_toEndOf="@+id/costs1"
+                android:text="Подробнее"
+                android:textColor="#39913C"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/numberCosts"
+                android:layout_width="45dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="235dp"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@+id/monthTextView"
+                android:text="123"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"></TextView>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="330dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ruble"></ImageView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="390dp"
+        android:layout_height="216dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="120dp"
+        android:orientation="vertical"
+        android:weightSum="5"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+        <RelativeLayout
+            android:id="@+id/minuts"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="355dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"></ImageView>
+
+            <ProgressBar
+                android:id="@+id/minutesProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="200dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="40dp"
+                android:outlineAmbientShadowColor="#39913C"></ProgressBar>
+
+            <TextView
+                android:id="@+id/minutsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="15dp"
+                android:text="Минуты"
+                android:textColor="@color/black"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="175dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/minutsTextView"
+                android:hint="Осталось:"
+                android:textColor="@color/black"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/is"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@+id/number"
+                android:text="из"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@+id/minutesProgressBar"
+                android:text="123"
+                android:textColor="@color/black"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/number2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@+id/is"
+                android:text="321"
+                android:textColor="@color/black"
+                android:textStyle="bold"></TextView>
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"></View>
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
+
+
+        <RelativeLayout
+            android:id="@+id/internet"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="355dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"></ImageView>
+
+            <ProgressBar
+                android:id="@+id/internetProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="200dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="40dp"
+                android:outlineAmbientShadowColor="@android:color/holo_orange_light" />
+
+            <TextView
+                android:id="@+id/internetTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="15dp"
+                android:text="Интернет"
+                android:textColor="@color/black"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="175dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/internetTextView"
+                android:hint="Осталось:"
+                android:textColor="@color/black"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/isInternet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@+id/numberInternet"
+                android:text="из"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/numberInternet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@+id/internetProgressBar"
+                android:text="124"
+                android:textColor="@color/black"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/numberInternet2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@+id/isInternet"
+                android:text="214"
+                android:textColor="@color/black"
+                android:textStyle="bold"></TextView>
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"></View>
+
+
+        <RelativeLayout
+            android:id="@+id/packed"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="38dp"
+                android:text="+ Подключить пакеты"
+                android:textColor="#39913C"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/packedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="15dp"
+                android:text="У вас нет пакетов SMS"
+                android:textColor="@color/black"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textUserBalance"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="80dp"
+        android:inputType="numberDecimal"
+        android:text="450"
+        android:textColor="@color/black"
+        android:textFontWeight="1"
+        android:textSize="28sp"
+        app:layout_anchor="@+id/app_bar" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ruble">
+
+    </ImageView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

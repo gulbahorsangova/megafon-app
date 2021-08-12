@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tj.anor.myapplicatio">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/megafon"
+        android:label=""
+        android:roundIcon="@drawable/megafon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplicatio">
+        <activity android:name=".CostsActivity"
+            android:label="Расходы"
+            android:parentActivityName=".ScrollingActivity">
+            <meta-data
+                android:name="android.support.ScrollingActivity"
+                android:value=".ScrollingActivity">
+            </meta-data>
+        </activity>
+        <activity
+            android:name=".MoreActivity"
+            android:label="More"
+            android:parentActivityName=".ScrollingActivity">
+            <meta-data
+                android:name="android.support.ScrollingActivity"
+                android:value=".ScrollingActivity">
+            </meta-data>
+        </activity>
+        <activity
+            android:name=".ForMeActivity"
+            android:label=""
+            android:parentActivityName=".ScrollingActivity">
+            <meta-data
+                android:name="android.support.ScrollingActivity"
+                android:value=".ScrollingActivity">
+            </meta-data>
+        </activity>
+        <activity
+            android:name=".ConnectionActivity"
+            android:label=""
+            android:parentActivityName=".ScrollingActivity">
+            <meta-data
+                android:name="android.support.ScrollingActivity"
+                android:value=".ScrollingActivity">
+            </meta-data>
+        </activity>
+        <activity
+            android:name=".FinanceActivity"
+            android:label=""
+            android:parentActivityName=".ScrollingActivity">
+            <meta-data
+                android:name="android.support.ScrollingActivity"
+                android:value=".ScrollingActivity">
+            </meta-data>
+        </activity>
+        <activity
+            android:name=".ServiceActivity"
+            android:label=""
+            android:parentActivityName=".ScrollingActivity">
+            <meta-data
+                android:name="android.support.ScrollingActivity"
+                android:value=".ScrollingActivity">
+            </meta-data>
+        </activity>
+        <activity
+            android:name=".ScrollingActivity"
+            android:label=""
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.MyApplicatio.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "354934483978",
+    "project_id": "myapplicatio-f67c8",
+    "storage_bucket": "myapplicatio-f67c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354934483978:android:4d855d458b1797284b43f3",
+        "android_client_info": {
+          "package_name": "tj.anor.myapplicatio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354934483978-07fdheft9kqagtoqo962npnc1iov5cvb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSXDVmHLHKSUtAjLF-dnIHxwjs1Tzg8Do"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354934483978-07fdheft9kqagtoqo962npnc1iov5cvb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

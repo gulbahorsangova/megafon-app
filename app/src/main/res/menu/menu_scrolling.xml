@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="tj.anor.myapplicatio.ScrollingActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Услуги"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_finance"
+        android:orderInCategory="100"
+        android:title="Финансы"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_services"
+        android:orderInCategory="100"
+        android:title="Связь"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_for_me"
+        android:orderInCategory="100"
+        android:title="Для меня"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_more"
+        android:orderInCategory="100"
+        android:title="Ещё"
+        app:showAsAction="never" />
+
+</menu>

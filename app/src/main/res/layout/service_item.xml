@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true">
+        </TextView>
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:padding="16dp"
+            android:layout_below="@+id/titleTextView"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/connectionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connection"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:padding="16dp"
+            android:layout_below="@+id/descriptionTextView"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/subscriptionFeeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subscription"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:padding="16dp"
+            android:layout_below="@+id/connectionTextView"
+            >
+        </TextView>
+
+        <EditText
+            android:id="@+id/connectionTextNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_toRightOf="@+id/connectionTextView"
+            android:layout_below="@+id/descriptionTextView"/>
+
+        <EditText
+            android:id="@+id/subscriptionFeeTextNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_toRightOf="@+id/subscriptionFeeTextView"
+            android:layout_below="@+id/connectionTextNumber"/>
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

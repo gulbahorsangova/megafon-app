@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="4dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:layout_marginStart="16dp"
+        android:text="Подробнее о расходах"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        >
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true">
+        </TextView>
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/titleTextView"
+            android:layout_centerHorizontal="true">
+        </ProgressBar>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp">
+        </EditText>
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/white"
+            android:layout_below="@+id/titleTextView"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:layout_toRightOf="@+id/progress_circular"
+            android:layout_marginStart="70dp">
+        </Button>
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/white"
+            android:layout_below="@+id/titleTextView"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_toLeftOf="@+id/progress_circular"
+            android:layout_marginEnd="70dp">
+        </Button>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp">
+
+        <TextView
+            android:id="@+id/subscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Абонентская плата по тарифу"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/subscription"
+            android:layout_marginStart="70dp">
+        </EditText>
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/white"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:layout_toRightOf="@+id/editText"
+            android:layout_marginStart="35dp">
+        </Button>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp">
+
+        <TextView
+            android:id="@+id/suscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Сообщения"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/messageEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/suscription"
+            android:layout_marginStart="210dp">
+        </EditText>
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/white"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:layout_toRightOf="@+id/messageEditText"
+            android:layout_marginStart="40dp">
+        </Button>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="400dp">
+
+        <TextView
+            android:id="@+id/write_of"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Списания"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp">
+        </TextView>
+
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/white"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:layout_toRightOf="@+id/write_of"
+            android:layout_marginStart="280dp">
+        </Button>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="460dp">
+
+        <TextView
+            android:id="@+id/replenishment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Пополнения"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp">
+        </TextView>
+
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/white"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:layout_toRightOf="@+id/replenishment"
+            android:layout_marginStart="260dp">
+        </Button>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="520dp">
+
+        <TextView
+            android:id="@+id/detail_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Заказ детализации"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp">
+        </TextView>
+
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/white"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:layout_toRightOf="@+id/detail_order"
+            android:layout_marginStart="210dp">
+        </Button>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="580dp">
+
+        <TextView
+            android:id="@+id/invoice_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Заказ счёта"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp">
+        </TextView>
+
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/white"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:layout_toRightOf="@+id/invoice_order"
+            android:layout_marginStart="255dp">
+        </Button>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="640dp">
+
+        <TextView
+            android:id="@+id/my_tariff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Мой тариф"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp">
+        </TextView>
+
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/white"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:layout_toRightOf="@+id/my_tariff"
+            android:layout_marginStart="270dp">
+        </Button>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
