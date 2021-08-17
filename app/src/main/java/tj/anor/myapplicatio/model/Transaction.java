@@ -1,10 +1,18 @@
 package tj.anor.myapplicatio.model;
 
+
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+import tj.anor.myapplicatio.utils.Constants;
+
+@Entity(tableName = Constants.TABLE_NAME_TRANSACTION)
 public class Transaction implements Serializable {
-    private String id;
+    @PrimaryKey(autoGenerate = true)
+    private int id;
     private double price;
     private String opr;
     private String type;
@@ -13,19 +21,18 @@ public class Transaction implements Serializable {
     public Transaction() {
     }
 
-    public Transaction(String id, double price, String opr, String type, String create_date) {
-        this.id = id;
+    public Transaction(double price, String opr, String type, String create_date) {
         this.price = price;
         this.opr = opr;
         this.type = type;
         this.create_date = create_date;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

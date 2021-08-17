@@ -62,39 +62,20 @@
         android:layout_gravity="center|top">
     </SearchView>
 
-    <HorizontalScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp">
 
-    <com.google.android.material.chip.ChipGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="385dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center|top"
+        android:backgroundTint="#6B2477"
+        android:text="ADD"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
         >
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:text="    Интернет"
-            android:textColor="@color/material_on_surface_emphasis_medium">
-        </com.google.android.material.chip.Chip>
-
-    <com.google.android.material.chip.Chip
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:text="    Звонки"
-        android:textColor="@color/material_on_surface_emphasis_medium">
-    </com.google.android.material.chip.Chip>
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="      Сообщения"
-            android:textColor="@color/material_on_surface_emphasis_medium">
-        </com.google.android.material.chip.Chip>
-
-    </com.google.android.material.chip.ChipGroup>
-    </HorizontalScrollView>
+    </Button>
 
 
 

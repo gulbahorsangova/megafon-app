@@ -29,11 +29,22 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.util.ApiUtil;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import tj.anor.myapplicatio.dao.TransactionDatabase;
 import tj.anor.myapplicatio.databinding.ActivityScrollingBinding;
+import tj.anor.myapplicatio.model.Post;
+import tj.anor.myapplicatio.model.Transaction;
 import tj.anor.myapplicatio.model.User;
+import tj.anor.myapplicatio.remote.APIUtils;
+import tj.anor.myapplicatio.remote.PostService;
 
 public class ScrollingActivity extends AppCompatActivity {
 
@@ -47,11 +58,37 @@ public class ScrollingActivity extends AppCompatActivity {
     private TextView number2;
     private TextView numberInternet;
     private TextView numberInternet2;
-
+    private PostService postService;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        postService = APIUtils.getUserService();
+        TransactionDatabase transactionDatabase = TransactionDatabase.getInstance(ScrollingActivity.this);
+        transactionDatabase.getTransactionDao().create(new Transaction( -26, "outcome", "Минут", "02-07-2021"));
+        transactionDatabase.getTransactionDao().create(new Transaction( -5, "outcome", "Звонок", "14-07-2021"));
+        transactionDatabase.getTransactionDao().create(new Transaction( -30, "outcome", "Минут", "12-07-2021"));
+        transactionDatabase.getTransactionDao().create(new Transaction( -2.00, "outcome", "Звонок", "28-07-2021"));
+        transactionDatabase.getTransactionDao().create(new Transaction( -30, "outcome", "Интернет", "18-07-2021"));
+        transactionDatabase.getTransactionDao().create(new Transaction( +40, "income", "Платеж", "08-07-2021"));
+        transactionDatabase.getTransactionDao().create(new Transaction( +96, "income", "Платеж", "09-07-2021"));
+        transactionDatabase.getTransactionDao().create(new Transaction( +5.00, "income", "Платеж", "10-07-2021"));
+
+        Call<List<Post>> call = postService.getPosts();
+        call.enqueue(new Callback<List<Post>>() {
+            @Override
+            public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
+                if (response.isSuccessful()) {
+                    List<Post> posts = response.body();
+                    posts.forEach(e->Log.d("post",e.toString()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Post>> call, Throwable t) {
+
+            }
+        });
         super.onCreate(savedInstanceState);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         binding = ActivityScrollingBinding.inflate(getLayoutInflater());

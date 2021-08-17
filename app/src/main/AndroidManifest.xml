@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tj.anor.myapplicatio">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/megafon"
@@ -9,13 +11,21 @@
         android:roundIcon="@drawable/megafon"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplicatio">
-        <activity android:name=".CostsActivity"
+        <activity android:name=".CostsContentItem"></activity>
+        <activity android:name=".CostsContentActivity" />
+        <activity android:name=".ContentServiceActivity" />
+        <activity android:name=".AddActivity" />
+        <activity android:name=".ConnectionServiceItem" />
+        <activity android:name=".ContentServiceItem" />
+        <activity android:name=".ConnectionService" />
+        <activity android:name=".ContentActivity" />
+        <activity
+            android:name=".CostsActivity"
             android:label="Расходы"
             android:parentActivityName=".ScrollingActivity">
             <meta-data
                 android:name="android.support.ScrollingActivity"
-                android:value=".ScrollingActivity">
-            </meta-data>
+                android:value=".ScrollingActivity" />
         </activity>
         <activity
             android:name=".MoreActivity"
@@ -23,8 +33,7 @@
             android:parentActivityName=".ScrollingActivity">
             <meta-data
                 android:name="android.support.ScrollingActivity"
-                android:value=".ScrollingActivity">
-            </meta-data>
+                android:value=".ScrollingActivity" />
         </activity>
         <activity
             android:name=".ForMeActivity"
@@ -32,8 +41,7 @@
             android:parentActivityName=".ScrollingActivity">
             <meta-data
                 android:name="android.support.ScrollingActivity"
-                android:value=".ScrollingActivity">
-            </meta-data>
+                android:value=".ScrollingActivity" />
         </activity>
         <activity
             android:name=".ConnectionActivity"
@@ -41,8 +49,7 @@
             android:parentActivityName=".ScrollingActivity">
             <meta-data
                 android:name="android.support.ScrollingActivity"
-                android:value=".ScrollingActivity">
-            </meta-data>
+                android:value=".ScrollingActivity" />
         </activity>
         <activity
             android:name=".FinanceActivity"
@@ -50,8 +57,7 @@
             android:parentActivityName=".ScrollingActivity">
             <meta-data
                 android:name="android.support.ScrollingActivity"
-                android:value=".ScrollingActivity">
-            </meta-data>
+                android:value=".ScrollingActivity" />
         </activity>
         <activity
             android:name=".ServiceActivity"
@@ -59,8 +65,7 @@
             android:parentActivityName=".ScrollingActivity">
             <meta-data
                 android:name="android.support.ScrollingActivity"
-                android:value=".ScrollingActivity">
-            </meta-data>
+                android:value=".ScrollingActivity" />
         </activity>
         <activity
             android:name=".ScrollingActivity"

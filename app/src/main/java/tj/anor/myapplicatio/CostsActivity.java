@@ -24,6 +24,27 @@ public class CostsActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
+        RelativeLayout relativeLayout2 = findViewById(R.id.writeOffs);
+        RelativeLayout relativeLayout3 = findViewById(R.id.refill);
+
+        relativeLayout2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(CostsActivity.this, CostsContentActivity.class);
+                intent2.putExtra("operTranzaction", "outcome");
+                startActivity(intent2);
+            }
+        });
+
+        relativeLayout3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent3 = new Intent(CostsActivity.this, CostsContentActivity.class);
+                intent3.putExtra("operTranzaction", "income");
+                startActivity(intent3);
+            }
+        });
+
         relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
